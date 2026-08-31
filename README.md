@@ -7,6 +7,7 @@ LeetCode solutions synced automatically by Algosync
 |  |
 | ------- |
 | [0231-power-of-two](https://github.com/raushanraj00/Algosync/tree/master/0231-power-of-two) |
+| [0326-power-of-three](https://github.com/raushanraj00/Algosync/tree/master/0326-power-of-three) |
 | [0342-power-of-four](https://github.com/raushanraj00/Algosync/tree/master/0342-power-of-four) |
 ## Bit Manipulation
 |  |
@@ -17,6 +18,7 @@ LeetCode solutions synced automatically by Algosync
 |  |
 | ------- |
 | [0231-power-of-two](https://github.com/raushanraj00/Algosync/tree/master/0231-power-of-two) |
+| [0326-power-of-three](https://github.com/raushanraj00/Algosync/tree/master/0326-power-of-three) |
 | [0342-power-of-four](https://github.com/raushanraj00/Algosync/tree/master/0342-power-of-four) |
 ## Array
 |  |
