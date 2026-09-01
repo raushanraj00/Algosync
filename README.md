@@ -25,6 +25,7 @@ LeetCode solutions synced automatically by Algosync
 ## Array
 |  |
 | ------- |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/raushanraj00/Algosync/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0033-search-in-rotated-sorted-array](https://github.com/raushanraj00/Algosync/tree/master/0033-search-in-rotated-sorted-array) |
 ## Binary Search
 |  |
@@ -38,4 +39,8 @@ LeetCode solutions synced automatically by Algosync
 |  |
 | ------- |
 | [0509-fibonacci-number](https://github.com/raushanraj00/Algosync/tree/master/0509-fibonacci-number) |
+## Two Pointers
+|  |
+| ------- |
+| [0026-remove-duplicates-from-sorted-array](https://github.com/raushanraj00/Algosync/tree/master/0026-remove-duplicates-from-sorted-array) |
 <!---LeetCode Topics End-->
