@@ -1,11 +1,11 @@
 class Solution {
 public:
     bool sumOfNumberAndReverse(int num) {
-        for (int i = num / 2; i <= num; ++i) {
-            int n = i, rev = 0;
-            while (n) rev = rev * 10 + n % 10, n /= 10;
-            if (i + rev == num) return true;
+        for(int i = num/2; i<=num; ++i){
+            string s = to_string(i); 
+            reverse(s.begin(),s.end()); 
+            if(i+stoi(s) == num) return true; 
         }
-        return false;
+        return false; 
     }
 };
