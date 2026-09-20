@@ -14,7 +14,6 @@ public:
     vector<int> postorderTraversal(TreeNode* root) {
         vector <int> postorder; 
         if(root == NULL) return postorder; 
-
         stack <TreeNode* > s; 
         s.push(root); 
         while(!s.empty()){
