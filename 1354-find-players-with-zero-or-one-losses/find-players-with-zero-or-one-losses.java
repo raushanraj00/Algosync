@@ -1,46 +1,36 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 class Solution {
     public List<List<Integer>> findWinners(int[][] matches) {
-        // Array to store the number of losses for each player. 
-        // -1 means the player hasn't played any matches.
-        int[] losses = new int[100001];
-        Arrays.fill(losses, -1);
+        Map<Integer, Integer> lost_m = new HashMap<>(); 
         
-        // Count losses and mark players who have played
-        for (int[] match : matches) {
-            int winner = match[0];
-            int loser = match[1];
-            
-            // If the winner hasn't been recorded yet, mark them with 0 losses
-            if (losses[winner] == -1) {
-                losses[winner] = 0;
-            }
-            
-            // If the loser hasn't been recorded, mark them with 1 loss.
-            // Otherwise, increment their loss count.
-            if (losses[loser] == -1) {
-                losses[loser] = 1;
-            } else {
-                losses[loser]++;
-            }
+        // Count losses
+        for(int i = 0; i < matches.length; i++){
+            int loser = matches[i][1]; 
+            lost_m.put(loser, lost_m.getOrDefault(loser, 0) + 1); 
         }
         
-        List<Integer> zeroLosses = new ArrayList<>();
-        List<Integer> oneLoss = new ArrayList<>();
+        List<Integer> not_lost = new ArrayList<>(); 
+        List<Integer> lost_once = new ArrayList<>(); 
         
-        // Iterate through the array to populate our result lists.
-        // Because we iterate from 1 to 100000, the IDs are naturally in increasing order.
-        for (int i = 1; i <= 100000; i++) {
-            if (losses[i] == 0) {
-                zeroLosses.add(i);
-            } else if (losses[i] == 1) {
-                oneLoss.add(i);
+        for(int i = 0; i < matches.length; i++){
+            int loser = matches[i][1]; 
+            int winner = matches[i][0]; 
+
+            // If winner is not in the map, add to not_lost and mark in map
+            if(!lost_m.containsKey(winner)){
+                not_lost.add(winner); 
+                lost_m.put(winner, 2); 
             }
+            // If loser has exactly 1 loss, add to lost_once
+            if(lost_m.get(loser) == 1){
+                lost_once.add(loser); 
+            } 
         }
         
-        return Arrays.asList(zeroLosses, oneLoss);
+        Collections.sort(lost_once);
+        Collections.sort(not_lost);
+        
+        return Arrays.asList(not_lost, lost_once); 
     }
 }
