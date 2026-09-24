@@ -31,10 +31,10 @@ public:
 
                 row[index] = node-> val; 
                 if(node-> left){
-                    nodesQueue.push(node-> left); 
-                } 
+                    nodesQueue.push(node->left); 
+                }
                 if(node-> right){
-                    nodesQueue.push(node-> right); 
+                    nodesQueue.push(node->right); 
                 }
             }
 
