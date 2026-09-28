@@ -4,16 +4,19 @@ public:
         int n = nums1.size(); 
         int m = nums2.size();
 
-        int temp[n+m];  
-        for(int i = 0; i<n; i++){
-            temp[i]= nums1[i]; 
+        vector<int> temp; 
+        for(int i = 0 ; i<n; i++){
+            temp.push_back(nums1[i]); 
         }
         for(int i = 0; i<m; i++){
-            temp[n+i] = nums2[i]; 
+            temp.push_back(nums2[i]); 
         }
-        sort(temp, temp + n+m);
-        int size = sizeof(temp) / sizeof(temp[0]); 
-        int t = size, t1 = (size/2)-1; 
+
+        sort(temp.begin(), temp.end()); 
+        int size = temp.size(); 
+        int t = size; 
+        int t1 = (size/2)-1 ; 
+        
         if( t%2 == 1){
             return temp[t/2]; 
         }
