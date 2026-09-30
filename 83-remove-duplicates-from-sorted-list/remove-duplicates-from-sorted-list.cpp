@@ -20,7 +20,6 @@ public:
                 head = head->next;
             }
         }
-
         return res;
     }
 };
